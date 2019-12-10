@@ -22,13 +22,13 @@ context('Acessar Página', () => {//contexto dos testes que serão realizados na
 
       it('Validar obrigatoriedade campo login', () => {
         cy.get('#username').click();
-        cy.get('[name="form"] > div:nth-of-type(1) > div.help-block > div').should('have.text','You did not enter a username');
+        cy.get('[name="form"] > div:nth-of-type(1) > div.help-block > div').should('have.text','You did not enter a username');//validação que após clicar em um campo e não inserir nenhum valor, que deverá ser apresentado um texto: "You did not enter a username"
         cy.get('#password').click();
          // eslint-disable-next-line no-trailing-spaces
       });
       
       it('Botão bloqueado', () => {
-        cy.get('button.btn.btn-danger').should('be.disabled');
+        cy.get('button.btn.btn-danger').should('be.disabled');//validação de que se os campos não forem preenchidos o botão deve estar desabilitado
        // eslint-disable-next-line no-trailing-spaces
       });
   });
